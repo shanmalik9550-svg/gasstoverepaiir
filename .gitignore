@@ -1,15 +1,9 @@
+# Local dev server
+server.js
+
 # Logs
 *.log
 npm-debug.log*
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Directory for instrumented code
-lib-cov
 
 # OS Files
 .DS_Store
