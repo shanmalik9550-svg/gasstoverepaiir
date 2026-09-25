@@ -1,0 +1,924 @@
+/* ==========================================================================
+   Gas Stove Repair Service - Call-Focused High Converting Landing Page
+   ========================================================================== */
+
+:root {
+  --color-primary: #D90429;
+  --color-primary-hover: #b80020;
+  --color-blue: #0056b3;
+  --color-blue-hover: #004494;
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #1eb956;
+  
+  --color-dark: #1E293B;
+  --color-dark-bg: #0F172A;
+  --color-text-main: #2D3748;
+  --color-text-muted: #64748B;
+  --color-bg-light: #F8FAFC;
+  --color-border: #E2E8F0;
+  --color-white: #FFFFFF;
+
+  --font-main: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  padding-bottom: 60px; /* Space for mobile sticky footer */
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ==========================================================================
+   Header: Centered Brand Title
+   ========================================================================== */
+.brand-competitor-header {
+  background: #FFFFFF;
+  padding: 1.15rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.header-logo-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-text-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.02em;
+}
+
+.header-text-brand i {
+  color: var(--color-primary);
+  font-size: 1.55rem;
+}
+
+.brand-highlight {
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   Hero Banner Wrap
+   ========================================================================== */
+.brand-hero-banner-wrap {
+  width: 100%;
+  max-width: 1140px;
+  margin: 1.25rem auto 0;
+  padding: 0 1.25rem;
+}
+
+.brand-hero-banner-wrap img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+/* ==========================================================================
+   Blue Service Bar (Calls Focused)
+   ========================================================================== */
+.brand-service-bar {
+  background: var(--color-blue);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 2.25rem 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.service-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.service-subtitle {
+  font-size: 1.05rem;
+  color: #DBEAFE;
+  margin-bottom: 1.5rem;
+}
+
+.brand-call-now-btn {
+  background: var(--color-primary);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.95rem 2rem;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  box-shadow: 0 4px 14px rgba(217, 4, 41, 0.45);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.brand-call-now-btn:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Book Technician Visit Section (Form Only WhatsApp Redirect)
+   ========================================================================== */
+.brand-booking-section {
+  padding: 3.5rem 0;
+  background: #FFFFFF;
+}
+
+.brand-booking-container {
+  max-width: 680px;
+}
+
+.brand-booking-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.brand-booking-header h2 {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-dark);
+  margin-bottom: 0.35rem;
+}
+
+.brand-booking-header p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.brand-form-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-md);
+}
+
+.direct-booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.brand-form-group {
+  width: 100%;
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+@media (max-width: 576px) {
+  .form-row-2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.brand-form-control {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  border: 1.5px solid #CBD5E1;
+  border-radius: var(--radius-md);
+  background: #F8FAFC;
+  color: var(--color-text-main);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.brand-form-control:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(217, 4, 41, 0.1);
+}
+
+select.brand-form-control {
+  cursor: pointer;
+}
+
+.brand-submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #FF6B00 0%, #D90429 100%);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  padding: 1rem;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  box-shadow: 0 6px 18px rgba(217, 4, 41, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.brand-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(217, 4, 41, 0.45);
+}
+
+/* ==========================================================================
+   Section Tags & Titles (Standardized)
+   ========================================================================== */
+.cata-section-heading {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+}
+
+.section-tag-pill {
+  display: inline-block;
+  background: #FEE2E2;
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  margin-bottom: 0.65rem;
+}
+
+.cata-section-heading h2 {
+  font-family: var(--font-heading);
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.cata-section-heading p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   About Section
+   ========================================================================== */
+.cata-about-section {
+  padding: 4.5rem 0;
+  background: #F8FAFC;
+}
+
+.cata-about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .cata-about-grid {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+.cata-about-image img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+}
+
+.cata-about-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+.cata-about-content p {
+  font-size: 0.925rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.cata-about-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+
+@media (min-width: 576px) {
+  .cata-about-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.cata-about-list div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.cata-about-list div i {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   Models We Repair Section
+   ========================================================================== */
+.cata-model-section {
+  padding: 4.5rem 0;
+  background: #FFFFFF;
+}
+
+.cata-model-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.cata-model-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.cata-model-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.cata-model-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+}
+
+.cata-model-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.model-card-call-btn {
+  background: var(--color-primary);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: background 0.2s;
+}
+
+.model-card-call-btn:hover {
+  background: var(--color-primary-hover);
+}
+
+/* ==========================================================================
+   Why Choose Us Section
+   ========================================================================== */
+.cata-why-section {
+  padding: 4.5rem 0;
+  background: #F8FAFC;
+}
+
+.cata-why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.cata-why-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s;
+}
+
+.cata-why-card:hover {
+  transform: translateY(-4px);
+}
+
+.cata-why-card i {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.cata-why-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.cata-why-card p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   CTA Section (Calls Only)
+   ========================================================================== */
+.cata-cta-section {
+  padding: 4rem 0;
+  background: linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.92)), url('images/brand-banner.jpg') center/cover no-repeat;
+  color: #FFFFFF;
+}
+
+.cata-cta-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.cata-cta-content {
+  max-width: 640px;
+}
+
+.cata-cta-badge {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  margin-bottom: 0.75rem;
+}
+
+.cata-cta-content h2 {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  margin-bottom: 0.65rem;
+}
+
+.cata-cta-content p {
+  font-size: 0.95rem;
+  color: #CBD5E1;
+  line-height: 1.6;
+}
+
+.cata-cta-buttons {
+  display: flex;
+  gap: 0.85rem;
+}
+
+.cata-call-btn {
+  background: var(--color-primary);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.95rem 1.75rem;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(217, 4, 41, 0.4);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cata-call-btn:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Services Section
+   ========================================================================== */
+.cata-services-section {
+  padding: 4.5rem 0;
+  background: #FFFFFF;
+}
+
+.cata-service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.cata-service-card {
+  background: #F8FAFC;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cata-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+  background: #FFFFFF;
+}
+
+.cata-service-card i {
+  font-size: 1.85rem;
+  color: var(--color-primary);
+  margin-bottom: 0.85rem;
+}
+
+.cata-service-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.cata-service-card p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   How It Works
+   ========================================================================== */
+.how-it-works-wrap {
+  padding: 4.5rem 0;
+  background: #F8FAFC;
+}
+
+.how-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.how-step-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.25rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.how-step-badge {
+  width: 46px;
+  height: 46px;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.how-step-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.4rem;
+}
+
+.how-step-card p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   FAQ Section
+   ========================================================================== */
+.cata-faq-section {
+  padding: 4.5rem 0;
+  background: #FFFFFF;
+}
+
+.cata-faq-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cata-faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+.cata-faq-item.active {
+  border-color: var(--color-primary);
+}
+
+.cata-faq-question {
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-dark);
+}
+
+.cata-faq-item.active .cata-faq-question {
+  color: var(--color-primary);
+}
+
+.cata-faq-question i {
+  transition: transform 0.2s;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.cata-faq-item.active .cata-faq-question i {
+  transform: rotate(180deg);
+  color: var(--color-primary);
+}
+
+.cata-faq-answer {
+  display: none;
+  padding: 0 1.25rem 1rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.cata-faq-item.active .cata-faq-answer {
+  display: block;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+  background: #0B1120;
+  color: #94A3B8;
+  padding: 3.5rem 0 1.5rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.logo-img-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 0.85rem;
+}
+
+.logo-img-wrapper i {
+  color: var(--color-primary);
+}
+
+.footer-about p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.footer-title {
+  font-family: var(--font-heading);
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links a {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #FFFFFF;
+}
+
+.footer-phone-highlight {
+  font-size: 1.05rem !important;
+  font-weight: 800;
+  color: #FFFFFF !important;
+}
+
+.footer-phone-highlight i {
+  color: var(--color-primary);
+}
+
+.disclaimer-footer-box {
+  grid-column: 1 / -1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #94A3B8;
+}
+
+.disclaimer-title {
+  color: #F87171;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.4rem;
+}
+
+.footer-bottom {
+  grid-column: 1 / -1;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.25rem;
+  font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   Floating Call Button (Calls Focused)
+   ========================================================================== */
+.btn-call-pulse {
+  position: fixed;
+  bottom: 75px;
+  right: 20px;
+  width: 58px;
+  height: 58px;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 18px rgba(217, 4, 41, 0.5);
+  z-index: 999;
+  animation: call-pulse 2s infinite;
+}
+
+@keyframes call-pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(217, 4, 41, 0.7); }
+  70% { transform: scale(1.06); box-shadow: 0 0 0 15px rgba(217, 4, 41, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(217, 4, 41, 0); }
+}
+
+@media (min-width: 992px) {
+  .btn-call-pulse {
+    bottom: 25px;
+  }
+}
+
+/* ==========================================================================
+   Mobile Fixed Call Now Bar (Full Width Red Call Bar)
+   ========================================================================== */
+.footer-oll-now {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background: #FFFFFF;
+  border-top: 1px solid var(--color-border);
+  z-index: 1000;
+}
+
+@media (min-width: 992px) {
+  .footer-oll-now {
+    display: none;
+  }
+}
+
+.col-now-footer {
+  background: var(--color-primary);
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 0.95rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   Toast Notification
+   ========================================================================== */
+.toast-notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100px);
+  background: #0F172A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-lg);
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.toast-notification.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
