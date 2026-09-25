@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Gas Stove Repair Service - Call-Focused High Converting Landing Page
+   Gas Stove Repair Service - Mobile-First High Converting Landing Page
    ========================================================================== */
 
 :root {
@@ -25,8 +25,8 @@
   --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
   --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
   --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
 }
 
 *, *::before, *::after {
@@ -38,14 +38,17 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
   font-family: var(--font-main);
   background-color: var(--color-bg-light);
   color: var(--color-text-main);
-  line-height: 1.6;
-  padding-bottom: 60px; /* Space for mobile sticky footer */
+  line-height: 1.5;
+  overflow-x: hidden;
+  width: 100%;
+  padding-bottom: 68px; /* Dedicated space for sticky mobile bottom bar */
 }
 
 @media (min-width: 992px) {
@@ -69,18 +72,21 @@ a {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 1rem;
 }
 
 /* ==========================================================================
-   Header: Centered Brand Title
+   Header: Centered Brand Title (Mobile Optimized)
    ========================================================================== */
 .brand-competitor-header {
   background: #FFFFFF;
-  padding: 1.15rem 1rem;
+  padding: 0.85rem 1rem;
   border-bottom: 1px solid var(--color-border);
   text-align: center;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  position: sticky;
+  top: 0;
+  z-index: 990;
 }
 
 .header-logo-container {
@@ -92,9 +98,9 @@ a {
 .header-text-brand {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.45rem;
   font-family: var(--font-heading);
-  font-size: 1.65rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: #111827;
   letter-spacing: -0.02em;
@@ -102,7 +108,7 @@ a {
 
 .header-text-brand i {
   color: var(--color-primary);
-  font-size: 1.55rem;
+  font-size: 1.35rem;
 }
 
 .brand-highlight {
@@ -110,95 +116,117 @@ a {
 }
 
 /* ==========================================================================
-   Hero Banner Wrap
+   Hero Banner
    ========================================================================== */
 .brand-hero-banner-wrap {
   width: 100%;
   max-width: 1140px;
-  margin: 1.25rem auto 0;
-  padding: 0 1.25rem;
+  margin: 0.75rem auto 0;
+  padding: 0 1rem;
 }
 
 .brand-hero-banner-wrap img {
   width: 100%;
-  max-height: 420px;
+  height: 220px;
   object-fit: cover;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 768px) {
+  .brand-hero-banner-wrap img {
+    height: 380px;
+    border-radius: var(--radius-lg);
+  }
 }
 
 /* ==========================================================================
-   Blue Service Bar (Calls Focused)
+   Blue Service Bar (Clean & Compact on Mobile)
    ========================================================================== */
 .brand-service-bar {
   background: var(--color-blue);
   color: #FFFFFF;
   text-align: center;
-  padding: 2.25rem 1.25rem;
-  margin-top: 1.5rem;
+  padding: 1.75rem 1rem;
+  margin-top: 0.75rem;
 }
 
 .service-title {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 800;
-  margin-bottom: 0.5rem;
+  line-height: 1.25;
+  margin-bottom: 0.4rem;
   letter-spacing: -0.02em;
 }
 
 .service-subtitle {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   color: #DBEAFE;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.15rem;
+  line-height: 1.4;
 }
 
 .brand-call-now-btn {
   background: var(--color-primary);
   color: #FFFFFF;
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
-  padding: 0.95rem 2rem;
+  padding: 0.85rem 1.5rem;
   border-radius: var(--radius-md);
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
-  box-shadow: 0 4px 14px rgba(217, 4, 41, 0.45);
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 340px;
+  box-shadow: 0 4px 12px rgba(217, 4, 41, 0.4);
   transition: transform 0.2s, background 0.2s;
 }
 
-.brand-call-now-btn:hover {
+.brand-call-now-btn:active, .brand-call-now-btn:hover {
   background: var(--color-primary-hover);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+}
+
+@media (min-width: 768px) {
+  .service-title {
+    font-size: 2rem;
+  }
+  .service-subtitle {
+    font-size: 1.05rem;
+  }
 }
 
 /* ==========================================================================
-   Book Technician Visit Section (Form Only WhatsApp Redirect)
+   Book Technician Visit Section
    ========================================================================== */
 .brand-booking-section {
-  padding: 3.5rem 0;
+  padding: 2.25rem 0;
   background: #FFFFFF;
 }
 
 .brand-booking-container {
-  max-width: 680px;
+  max-width: 600px;
 }
 
 .brand-booking-header {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .brand-booking-header h2 {
   font-family: var(--font-heading);
-  font-size: 1.85rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--color-dark);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.25;
 }
 
 .brand-booking-header p {
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   color: var(--color-text-muted);
 }
 
@@ -206,14 +234,14 @@ a {
   background: #FFFFFF;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 2rem 1.75rem;
-  box-shadow: var(--shadow-md);
+  padding: 1.5rem 1.15rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .direct-booking-form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.85rem;
 }
 
 .brand-form-group {
@@ -222,25 +250,35 @@ a {
 
 .form-row-2col {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 0.85rem;
 }
 
-@media (max-width: 576px) {
+@media (min-width: 480px) {
   .form-row-2col {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 .brand-form-control {
   width: 100%;
-  padding: 0.85rem 1rem;
-  font-size: 0.95rem;
+  padding: 0.75rem 0.85rem;
+  font-size: 0.9rem;
   border: 1.5px solid #CBD5E1;
   border-radius: var(--radius-md);
   background: #F8FAFC;
   color: var(--color-text-main);
   transition: border-color 0.2s, background 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select.brand-form-control {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2rem;
 }
 
 .brand-form-control:focus {
@@ -250,120 +288,136 @@ a {
   box-shadow: 0 0 0 3px rgba(217, 4, 41, 0.1);
 }
 
-select.brand-form-control {
-  cursor: pointer;
-}
-
 .brand-submit-btn {
   width: 100%;
   background: linear-gradient(135deg, #FF6B00 0%, #D90429 100%);
   color: #FFFFFF;
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 800;
-  padding: 1rem;
+  padding: 0.9rem;
   border: none;
   border-radius: var(--radius-md);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.65rem;
-  box-shadow: 0 6px 18px rgba(217, 4, 41, 0.35);
+  gap: 0.5rem;
+  box-shadow: 0 4px 14px rgba(217, 4, 41, 0.35);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.brand-submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(217, 4, 41, 0.45);
+.brand-submit-btn:active {
+  transform: translateY(1px);
 }
 
 /* ==========================================================================
-   Section Tags & Titles (Standardized)
+   Section Tags & Titles
    ========================================================================== */
 .cata-section-heading {
   text-align: center;
-  max-width: 720px;
-  margin: 0 auto 2.5rem;
+  max-width: 680px;
+  margin: 0 auto 1.75rem;
 }
 
 .section-tag-pill {
   display: inline-block;
   background: #FEE2E2;
   color: var(--color-primary);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 0.3rem 0.9rem;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
   border-radius: 50px;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.45rem;
 }
 
 .cata-section-heading h2 {
   font-family: var(--font-heading);
-  font-size: 1.9rem;
+  font-size: 1.4rem;
   font-weight: 800;
   color: var(--color-dark);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
   letter-spacing: -0.02em;
 }
 
 .cata-section-heading p {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--color-text-muted);
+  line-height: 1.45;
+}
+
+@media (min-width: 768px) {
+  .cata-section-heading h2 {
+    font-size: 1.85rem;
+  }
+  .cata-section-heading p {
+    font-size: 0.95rem;
+  }
 }
 
 /* ==========================================================================
-   About Section
+   About Section (Mobile Optimized)
    ========================================================================== */
 .cata-about-section {
-  padding: 4.5rem 0;
+  padding: 2.5rem 0;
   background: #F8FAFC;
 }
 
 .cata-about-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
 @media (min-width: 992px) {
   .cata-about-grid {
     grid-template-columns: 1fr 1.2fr;
+    gap: 2.5rem;
   }
 }
 
 .cata-about-image img {
   width: 100%;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  height: 240px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
   object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .cata-about-image img {
+    height: 380px;
+    border-radius: var(--radius-lg);
+  }
 }
 
 .cata-about-content h3 {
   font-family: var(--font-heading);
-  font-size: 1.45rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: var(--color-dark);
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
+  line-height: 1.3;
 }
 
 .cata-about-content p {
-  font-size: 0.925rem;
+  font-size: 0.875rem;
   color: #475569;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.15rem;
 }
 
 .cata-about-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.85rem;
+  gap: 0.65rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 480px) {
   .cata-about-list {
     grid-template-columns: 1fr 1fr;
   }
@@ -372,76 +426,84 @@ select.brand-form-control {
 .cata-about-list div {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  font-size: 0.95rem;
+  gap: 0.5rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-dark);
 }
 
 .cata-about-list div i {
   color: var(--color-primary);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /* ==========================================================================
-   Models We Repair Section
+   Models We Repair Section (Mobile 2-Column Responsive Grid)
    ========================================================================== */
 .cata-model-section {
-  padding: 4.5rem 0;
+  padding: 2.5rem 0;
   background: #FFFFFF;
 }
 
 .cata-model-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+}
+
+@media (min-width: 768px) {
+  .cata-model-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
 }
 
 .cata-model-card {
   background: #FFFFFF;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
   text-align: center;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   display: flex;
   flex-direction: column;
 }
 
-.cata-model-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-
 .cata-model-card img {
   width: 100%;
-  height: 170px;
+  height: 120px;
   object-fit: cover;
-  border-radius: var(--radius-md);
-  margin-bottom: 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.65rem;
+}
+
+@media (min-width: 768px) {
+  .cata-model-card img {
+    height: 160px;
+  }
 }
 
 .cata-model-card h3 {
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: 0.875rem;
   font-weight: 700;
   color: var(--color-dark);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   flex: 1;
+  line-height: 1.3;
 }
 
 .model-card-call-btn {
   background: var(--color-primary);
   color: #FFFFFF;
   font-weight: 700;
-  font-size: 0.9rem;
-  padding: 0.65rem 1rem;
-  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  padding: 0.55rem 0.65rem;
+  border-radius: var(--radius-sm);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
   transition: background 0.2s;
 }
 
@@ -453,69 +515,73 @@ select.brand-form-control {
    Why Choose Us Section
    ========================================================================== */
 .cata-why-section {
-  padding: 4.5rem 0;
+  padding: 2.5rem 0;
   background: #F8FAFC;
 }
 
 .cata-why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+
+@media (min-width: 576px) {
+  .cata-why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .cata-why-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 .cata-why-card {
   background: #FFFFFF;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1rem;
   text-align: center;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.2s;
-}
-
-.cata-why-card:hover {
-  transform: translateY(-4px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
 
 .cata-why-card i {
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: var(--color-primary);
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
 }
 
 .cata-why-card h3 {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--color-dark);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
 }
 
 .cata-why-card p {
-  font-size: 0.875rem;
+  font-size: 0.825rem;
   color: var(--color-text-muted);
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 /* ==========================================================================
-   CTA Section (Calls Only)
+   CTA Section (Calls Focused)
    ========================================================================== */
 .cata-cta-section {
-  padding: 4rem 0;
-  background: linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.92)), url('images/brand-banner.jpg') center/cover no-repeat;
+  padding: 2.75rem 0;
+  background: linear-gradient(rgba(15, 23, 42, 0.94), rgba(15, 23, 42, 0.94)), url('images/brand-banner.jpg') center/cover no-repeat;
   color: #FFFFFF;
+  text-align: center;
 }
 
 .cata-cta-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.cata-cta-content {
-  max-width: 640px;
+  gap: 1.25rem;
 }
 
 .cata-cta-badge {
@@ -525,161 +591,164 @@ select.brand-form-control {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 0.25rem 0.75rem;
+  padding: 0.2rem 0.65rem;
   border-radius: 50px;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.4rem;
 }
 
 .cata-cta-content h2 {
   font-family: var(--font-heading);
-  font-size: 1.85rem;
+  font-size: 1.45rem;
   font-weight: 800;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
 }
 
 .cata-cta-content p {
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   color: #CBD5E1;
-  line-height: 1.6;
-}
-
-.cata-cta-buttons {
-  display: flex;
-  gap: 0.85rem;
+  line-height: 1.55;
+  max-width: 580px;
+  margin: 0 auto;
 }
 
 .cata-call-btn {
   background: var(--color-primary);
   color: #FFFFFF;
   font-weight: 700;
-  font-size: 1.05rem;
-  padding: 0.95rem 1.75rem;
+  font-size: 1rem;
+  padding: 0.85rem 1.5rem;
   border-radius: var(--radius-md);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  width: 100%;
+  max-width: 320px;
   box-shadow: 0 4px 12px rgba(217, 4, 41, 0.4);
-  transition: background 0.2s, transform 0.2s;
-}
-
-.cata-call-btn:hover {
-  background: var(--color-primary-hover);
-  transform: translateY(-2px);
 }
 
 /* ==========================================================================
    Services Section
    ========================================================================== */
 .cata-services-section {
-  padding: 4.5rem 0;
+  padding: 2.5rem 0;
   background: #FFFFFF;
 }
 
 .cata-service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+}
+
+@media (min-width: 768px) {
+  .cata-service-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+  }
 }
 
 .cata-service-card {
   background: #F8FAFC;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  padding: 1.15rem 0.85rem;
   text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.cata-service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-sm);
-  background: #FFFFFF;
 }
 
 .cata-service-card i {
-  font-size: 1.85rem;
+  font-size: 1.5rem;
   color: var(--color-primary);
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.5rem;
 }
 
 .cata-service-card h3 {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--color-dark);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
 }
 
 .cata-service-card p {
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   color: var(--color-text-muted);
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 /* ==========================================================================
    How It Works
    ========================================================================== */
 .how-it-works-wrap {
-  padding: 4.5rem 0;
+  padding: 2.5rem 0;
   background: #F8FAFC;
 }
 
 .how-steps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+}
+
+@media (min-width: 768px) {
+  .how-steps-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .how-step-card {
   background: #FFFFFF;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 2rem 1.25rem;
+  border-radius: var(--radius-md);
+  padding: 1.25rem 0.85rem;
   text-align: center;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
 
 .how-step-badge {
-  width: 46px;
-  height: 46px;
+  width: 36px;
+  height: 36px;
   background: var(--color-primary);
   color: #FFFFFF;
   border-radius: 50%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1rem;
+  margin: 0 auto 0.65rem;
 }
 
 .how-step-card h3 {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--color-dark);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 .how-step-card p {
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   color: var(--color-text-muted);
+  line-height: 1.4;
 }
 
 /* ==========================================================================
    FAQ Section
    ========================================================================== */
 .cata-faq-section {
-  padding: 4.5rem 0;
+  padding: 2.5rem 0;
   background: #FFFFFF;
 }
 
 .cata-faq-wrapper {
-  max-width: 800px;
+  max-width: 750px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .cata-faq-item {
@@ -694,14 +763,15 @@ select.brand-form-control {
 }
 
 .cata-faq-question {
-  padding: 1rem 1.25rem;
+  padding: 0.85rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   color: var(--color-dark);
+  line-height: 1.35;
 }
 
 .cata-faq-item.active .cata-faq-question {
@@ -711,7 +781,9 @@ select.brand-form-control {
 .cata-faq-question i {
   transition: transform 0.2s;
   color: var(--color-text-muted);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
 }
 
 .cata-faq-item.active .cata-faq-question i {
@@ -721,10 +793,10 @@ select.brand-form-control {
 
 .cata-faq-answer {
   display: none;
-  padding: 0 1.25rem 1rem;
-  font-size: 0.875rem;
+  padding: 0 1rem 0.85rem;
+  font-size: 0.825rem;
   color: var(--color-text-muted);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .cata-faq-item.active .cata-faq-answer {
@@ -737,14 +809,21 @@ select.brand-form-control {
 .footer {
   background: #0B1120;
   color: #94A3B8;
-  padding: 3.5rem 0 1.5rem;
+  padding: 2.5rem 0 1.25rem;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+  }
 }
 
 .logo-img-wrapper {
@@ -755,7 +834,7 @@ select.brand-form-control {
   font-size: 1.25rem;
   font-weight: 800;
   color: #FFFFFF;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.65rem;
 }
 
 .logo-img-wrapper i {
@@ -763,52 +842,42 @@ select.brand-form-control {
 }
 
 .footer-about p {
-  font-size: 0.85rem;
-  line-height: 1.6;
+  font-size: 0.825rem;
+  line-height: 1.55;
 }
 
 .footer-title {
   font-family: var(--font-heading);
   color: #FFFFFF;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .footer-links {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .footer-links a {
-  font-size: 0.85rem;
+  font-size: 0.825rem;
   color: #94A3B8;
-  transition: color 0.2s;
-}
-
-.footer-links a:hover {
-  color: #FFFFFF;
 }
 
 .footer-phone-highlight {
-  font-size: 1.05rem !important;
+  font-size: 1rem !important;
   font-weight: 800;
   color: #FFFFFF !important;
 }
 
-.footer-phone-highlight i {
-  color: var(--color-primary);
-}
-
 .disclaimer-footer-box {
-  grid-column: 1 / -1;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
-  padding: 1.25rem;
-  font-size: 0.8rem;
-  line-height: 1.6;
+  padding: 1rem;
+  font-size: 0.78rem;
+  line-height: 1.55;
   color: #94A3B8;
 }
 
@@ -817,30 +886,29 @@ select.brand-form-control {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
 }
 
 .footer-bottom {
-  grid-column: 1 / -1;
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 1.25rem;
-  font-size: 0.8rem;
+  padding-top: 1rem;
+  font-size: 0.78rem;
 }
 
 /* ==========================================================================
-   Floating Call Button (Calls Focused)
+   Floating Button (Only Desktop - Hidden on Mobile to Prevent Overlap!)
    ========================================================================== */
 .btn-call-pulse {
+  display: none; /* Completely hidden on mobile */
   position: fixed;
-  bottom: 75px;
-  right: 20px;
+  bottom: 25px;
+  right: 25px;
   width: 58px;
   height: 58px;
   background: var(--color-primary);
   color: #FFFFFF;
   border-radius: 50%;
-  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
@@ -849,30 +917,33 @@ select.brand-form-control {
   animation: call-pulse 2s infinite;
 }
 
+@media (min-width: 992px) {
+  .btn-call-pulse {
+    display: flex;
+  }
+}
+
 @keyframes call-pulse {
   0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(217, 4, 41, 0.7); }
   70% { transform: scale(1.06); box-shadow: 0 0 0 15px rgba(217, 4, 41, 0); }
   100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(217, 4, 41, 0); }
 }
 
-@media (min-width: 992px) {
-  .btn-call-pulse {
-    bottom: 25px;
-  }
-}
-
 /* ==========================================================================
-   Mobile Fixed Call Now Bar (Full Width Red Call Bar)
+   Mobile Fixed Call Now Bar (Clean, Centered, No Overlaps)
    ========================================================================== */
 .footer-oll-now {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  width: 100%;
   display: block;
-  background: #FFFFFF;
-  border-top: 1px solid var(--color-border);
-  z-index: 1000;
+  background: var(--color-primary);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 9999;
+  box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.2);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 @media (min-width: 992px) {
@@ -882,17 +953,23 @@ select.brand-form-control {
 }
 
 .col-now-footer {
-  background: var(--color-primary);
+  width: 100%;
+  background: transparent;
   color: #FFFFFF;
+  font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 1.05rem;
-  padding: 0.95rem;
+  font-size: 1rem;
+  padding: 0.85rem 1rem;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+}
+
+.col-now-footer:active {
+  background: var(--color-primary-hover);
 }
 
 /* ==========================================================================
@@ -900,22 +977,25 @@ select.brand-form-control {
    ========================================================================== */
 .toast-notification {
   position: fixed;
-  top: 20px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%) translateY(-100px);
   background: #0F172A;
   color: #FFFFFF;
-  padding: 0.75rem 1.25rem;
+  padding: 0.65rem 1.15rem;
   border-radius: 50px;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.45rem;
   box-shadow: var(--shadow-lg);
-  z-index: 9999;
+  z-index: 10000;
   opacity: 0;
   transition: all 0.3s ease;
+  width: 90%;
+  max-width: 380px;
+  justify-content: center;
 }
 
 .toast-notification.show {
