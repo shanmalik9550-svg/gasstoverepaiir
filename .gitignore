@@ -1,5 +1,6 @@
 # Local dev server
 server.js
+serve.js
 
 # Logs
 *.log

@@ -57,13 +57,18 @@
   }
 
   /**
-   * Main Form Submission: Email Alert (Web3Forms) + WhatsApp Redirect
+   * Setup Booking / Contact Form Handler
    */
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', async function (e) {
+  const formsToHandle = [
+    document.getElementById('bookingForm'),
+    document.getElementById('contactBookingForm')
+  ].filter(Boolean);
+
+  formsToHandle.forEach(form => {
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
 
-      const formData = new FormData(bookingForm);
+      const formData = new FormData(form);
       formData.set('access_key', WEB3FORMS_ACCESS_KEY);
 
       const name = (formData.get('name') || '').trim();
@@ -84,7 +89,7 @@
         return;
       }
 
-      const submitBtn = bookingForm.querySelector('button[type="submit"]');
+      const submitBtn = form.querySelector('button[type="submit"]');
       const originalHtml = submitBtn.innerHTML;
 
       // Update UI button state
@@ -94,7 +99,7 @@
       showToast('Sending booking notification & opening WhatsApp... 🚀', 'fa-brands fa-whatsapp');
 
       // Set informative email subject
-      formData.set('subject', `New Gas Stove Booking: ${name} (${mobile}) - ${product}`);
+      formData.set('subject', `New Appliance Repair Booking: ${name} (${mobile}) - ${product}`);
 
       try {
         // 1. Send Email Notification via Web3Forms API
@@ -111,12 +116,12 @@
 
       setTimeout(() => {
         window.location.href = waUrl;
-        bookingForm.reset();
+        form.reset();
         submitBtn.innerHTML = originalHtml;
         submitBtn.disabled = false;
       }, 500);
     });
-  }
+  });
 
   /**
    * FAQ Accordion

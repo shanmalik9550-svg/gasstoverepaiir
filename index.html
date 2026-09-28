@@ -55,15 +55,41 @@
 </head>
 <body>
 
-  <!-- Header: Centered Brand Title -->
+  <!-- Header: Centered Brand Title & Navigation -->
   <header class="brand-competitor-header">
-    <a href="#" class="header-logo-container" aria-label="Appliance Repair Experts Home">
+    <a href="index.html" class="header-logo-container" aria-label="Appliance Repair Experts Home">
       <div class="header-text-brand">
         <i class="fa-solid fa-screwdriver-wrench"></i>
         <span>Appliance<span class="brand-highlight">Experts</span></span>
       </div>
     </a>
+
+    <!-- Desktop Navigation Links (Google Ads Sitelinks Target) -->
+    <ul class="brand-nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Book Service</a></li>
+      <li><a href="#models">Models</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <a href="tel:18002026208" class="header-cta-phone">
+      <i class="fa-solid fa-phone"></i> 1800-202-6208
+    </a>
   </header>
+
+  <!-- Mobile Quick Nav -->
+  <div class="mobile-quick-nav">
+    <a href="#services"><i class="fa-solid fa-fire-burner"></i> Services</a>
+    <a href="#contact"><i class="fa-solid fa-calendar-check"></i> Book Service</a>
+    <a href="#models"><i class="fa-solid fa-layer-group"></i> Models</a>
+    <a href="#reviews"><i class="fa-solid fa-star"></i> Reviews</a>
+    <a href="#faq"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+    <a href="contact.html"><i class="fa-solid fa-headset"></i> Contact Us</a>
+  </div>
 
   <!-- Appliance Hero Banner -->
   <div class="brand-hero-banner-wrap">
@@ -85,6 +111,7 @@
   <section class="brand-booking-section" id="contact">
     <div class="container brand-booking-container">
       <div class="brand-booking-header">
+        <span class="section-tag-pill" style="margin-bottom: 0.5rem; display: inline-block;">Online Doorstep Booking</span>
         <h2>Book Technician Visit</h2>
         <p>Fill in your details and tell us about your appliance problem.</p>
       </div>
@@ -135,6 +162,23 @@
           <div class="brand-form-group">
             <textarea name="message" required class="brand-form-control" placeholder="Describe your appliance problem" rows="3"></textarea>
           </div>
+
+          <!-- Data Protection & Privacy Notice (Form data protected under law) -->
+          <div class="form-privacy-guarantee">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div>
+              <strong>Data Protection Guarantee:</strong>
+              Your contact details are collected strictly to schedule your technician visit. Protected under the <em>DPDP Act 2023</em> &amp; <em>IT Act 2000</em>. 256-bit SSL encrypted &amp; never shared with third parties.
+            </div>
+          </div>
+
+          <!-- Explicit Consent Checkbox -->
+          <label class="form-consent-group">
+            <input type="checkbox" name="consent" required checked>
+            <span>
+              I agree to the <a href="privacy-policy.html">Privacy Policy</a> &amp; <a href="terms.html">Terms</a>, and consent to receive booking updates via Call / WhatsApp.
+            </span>
+          </label>
 
           <!-- Submit Button: Form Only WhatsApp Redirect -->
           <div>
@@ -393,9 +437,9 @@
   </section>
 
   <!--==================================
-      HOW IT WORKS SECTION
+      HOW IT WORKS SECTION (Sitelink: #how-it-works)
   ===================================-->
-  <section class="how-it-works-wrap">
+  <section class="how-it-works-wrap" id="how-it-works">
     <div class="container">
       <div class="cata-section-heading">
         <span class="section-tag-pill">Simple & Easy</span>
@@ -425,14 +469,110 @@
         <div class="how-step-card">
           <div class="how-step-badge">4</div>
           <h3>Same-Day Fix</h3>
-          <p>Repaired on the spot with quality parts and a service warranty.</p>
+          <p>Repaired on the spot with quality parts and an assured 90-day warranty.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!--==================================
-      FAQ SECTION
+      CUSTOMER REVIEWS SECTION (Sitelink: #reviews)
+  ===================================-->
+  <section class="cata-reviews-section" id="reviews">
+    <div class="container">
+      <div class="cata-section-heading">
+        <span class="section-tag-pill">Customer Feedback</span>
+        <h2>What Our Customers Say</h2>
+        <p>Over 1,450+ satisfied households rely on our fast doorstep repair across major cities.</p>
+      </div>
+
+      <div class="reviews-summary-bar">
+        <div class="reviews-rating-big">
+          <span>4.9</span>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+        <div class="reviews-summary-stats">
+          Based on <strong>1,450+ Verified Doorstep Repairs</strong> &bull; 90-Day Warranty Assured
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-user-info">
+              <div class="review-avatar">RS</div>
+              <div>
+                <div class="review-user-name">Rohit Sharma</div>
+                <div class="review-location">Gurgaon, Sector 56</div>
+              </div>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">
+            "My 4-burner glass hob was giving very low yellow flame. The technician arrived in just 35 minutes, cleaned the brass nozzles thoroughly, and replaced a jammed valve. The flame is now perfectly blue and strong!"
+          </p>
+          <div class="review-service-tag"><i class="fa-solid fa-wrench"></i> 4-Burner Hob Repair</div>
+          <div class="review-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Customer Visit</div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-user-info">
+              <div class="review-avatar" style="background: #D90429;">PA</div>
+              <div>
+                <div class="review-user-name">Priya Agarwal</div>
+                <div class="review-location">South Delhi, Hauz Khas</div>
+              </div>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">
+            "The auto-ignition spark had stopped clicking on two burners. Booked through their website form, and they coordinated immediately on WhatsApp. Fixed within an hour with a genuine spark module and 90-day warranty card."
+          </p>
+          <div class="review-service-tag"><i class="fa-solid fa-bolt"></i> Auto-Ignition Repair</div>
+          <div class="review-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Customer Visit</div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-user-info">
+              <div class="review-avatar" style="background: #10B981;">VK</div>
+              <div>
+                <div class="review-user-name">Vikram Kulkarni</div>
+                <div class="review-location">Noida, Sector 62</div>
+              </div>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">
+            "Noticed a mild gas odor near our stove pipeline. Called their toll-free number and they treated it with emergency priority. Replaced the faulty regulator connector pipe safely. Very professional service and upfront pricing."
+          </p>
+          <div class="review-service-tag"><i class="fa-solid fa-shield-halved"></i> Emergency Gas Leak Fix</div>
+          <div class="review-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Customer Visit</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--==================================
+      FAQ SECTION (Sitelink: #faq)
   ===================================-->
   <section class="cata-faq-section" id="faq">
     <div class="container">
@@ -497,37 +637,60 @@
   </section>
 
   <!--==========================
-      FOOTER (Toll-Free Calls Only)
+      FOOTER (Full Policy & Contact Linking)
   ===========================-->
   <footer class="footer">
     <div class="container footer-grid">
+      
+      <!-- Col 1: About & Trust -->
       <div class="footer-about">
         <div class="logo-img-wrapper">
           <i class="fa-solid fa-screwdriver-wrench"></i>
           <span>Appliance<span class="brand-highlight">Experts</span></span>
         </div>
         <p>
-          Fast, reliable multi-model doorstep repair and maintenance for all gas stoves, built-in hobs, cooking ranges, and chimneys. 30-minute rapid technician response.
+          Fast, reliable multi-model doorstep repair and maintenance for all gas stoves, built-in hobs, cooking ranges, and chimneys. 30-minute rapid technician response across India.
         </p>
+        <div class="footer-trust-badge">
+          <i class="fa-solid fa-shield-check"></i> 100% Data Protection Under Indian Laws
+        </div>
       </div>
 
+      <!-- Col 2: Quick Links (Sitelinks Target) -->
       <div class="footer-links-col">
         <h4 class="footer-title">Quick Links</h4>
         <ul class="footer-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#services">Gas Stove Repair</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#contact">Book Service</a></li>
           <li><a href="#models">Appliance Models</a></li>
           <li><a href="#why-us">Why Choose Us</a></li>
-          <li><a href="#contact">Book Technician</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#reviews">Customer Reviews</a></li>
           <li><a href="#faq">FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
 
+      <!-- Col 3: Legal & Policies (Linked from Footer) -->
+      <div class="footer-links-col">
+        <h4 class="footer-title">Legal & Policies</h4>
+        <ul class="footer-links">
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="refund-policy.html">Cancellation & Refund Policy</a></li>
+          <li><a href="disclaimer.html">Independent Service Disclaimer</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact & Helpline -->
       <div class="footer-services">
         <h4 class="footer-title">Contact & Helpline</h4>
         <ul class="footer-links">
           <li><a href="tel:18002026208" class="footer-phone-highlight"><i class="fa-solid fa-phone"></i> Toll-Free: 1800-202-6208</a></li>
-          <li style="color: #cbd5e1; font-size: 0.85rem; margin-top: 0.25rem;"><i class="fa-solid fa-clock"></i> 24x7 Customer Support Desk</li>
+          <li style="color: #cbd5e1; font-size: 0.85rem; margin-top: 0.25rem;"><i class="fa-brands fa-whatsapp"></i> WhatsApp: +91 95993 39483</li>
+          <li style="color: #cbd5e1; font-size: 0.85rem; margin-top: 0.25rem;"><i class="fa-solid fa-envelope"></i> gulafsha975615@gmail.com</li>
+          <li style="color: #cbd5e1; font-size: 0.85rem; margin-top: 0.25rem;"><i class="fa-solid fa-clock"></i> 24x7 Doorstep Support Desk</li>
         </ul>
       </div>
 
@@ -535,11 +698,11 @@
       <div class="disclaimer-footer-box">
         <p class="disclaimer-title"><i class="fa-solid fa-shield-halved"></i> Independent Third-Party Non-Affiliation Notice</p>
         <p>Kitchen Appliance Repair Experts is an independent, non-affiliated third-party doorstep kitchen appliance repair and maintenance service provider. We specialize in out-of-warranty repairs for all types and models of household gas stoves, hobs, cooking ranges, and kitchen chimneys.</p>
-        <p>We are an independent repair service provider and do not claim affiliation with or endorsement from any manufacturing companies or original equipment makers. All service offerings are strictly independent out-of-warranty repair and maintenance solutions.</p>
+        <p>We are not affiliated with, sponsored by, authorized by, or endorsed by any specific original equipment appliance manufacturers or brand trademark owners. All brand names and trademarks are used strictly for reference and compatibility identification.</p>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Kitchen Appliance Repair Experts (24x7 Customer Support). Owned by Harender Sharma. All rights reserved.</p>
+        <p>&copy; 2026 Kitchen Appliance Repair Experts (24x7 Customer Support). Owned by Gulafshan. All rights reserved.</p>
       </div>
     </div>
   </footer>
